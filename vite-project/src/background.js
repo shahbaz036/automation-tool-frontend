@@ -58,7 +58,7 @@ async function generateTextWithGemini(prompt) {
       console.log("Generating text with prompt:", prompt);
 
       try {
-        const response = await fetch('http://localhost:5000/api/generate', {
+        const response = await fetch('https://automation-tool-backend-1.onrender.com/api/generate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ function handleMessage(msg, port) {
 function handleGetAIReply(data, port) {
   chrome.storage.local.get(['token'], function(result) {
     if (result.token) {
-      fetch('http://localhost:5000/api/get-ai-reply', {
+      fetch('https://automation-tool-backend-1.onrender.com/api/get-ai-reply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

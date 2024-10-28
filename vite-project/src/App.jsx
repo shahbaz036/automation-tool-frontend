@@ -196,7 +196,7 @@ const Settings = ({ onNavigate }) => {
       if (!result.token) {
         throw new Error('User not logged in');
       }
-      const response = await fetch('http://localhost:5000/api/linkedin/auth', {
+      const response = await fetch('https://automation-tool-backend-1.onrender.com/api/linkedin/auth', {
         headers: {
           'Authorization': `Bearer ${result.token}`
         }
